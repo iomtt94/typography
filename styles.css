@@ -87,6 +87,7 @@
   --responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
   --responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
   --responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+  --wp--preset--font-size--large: 24px;
 }
 
 *, ::after, ::before {
@@ -264,7 +265,7 @@ blockquote, body, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr
 
 p {
   font-size: var(--global--font-size-xs);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .entry-content:before {
@@ -502,7 +503,7 @@ blockquote > :first-child {
 .quote-floatright p {
   font-family: Gilroy, sans-serif;
   font-style: normal;
-  font-size: 24px;
+  font-size: 24px !important;
   line-height: 29px;
 }
 
@@ -599,5 +600,30 @@ hr.wp-block-separator:not(.is-style-dots):not(.alignwide) {
 }
 
 hr.wp-block-separator.is-style-twentytwentyone-separator-thick {
-  border-bottom-width: calc(4 * var(--separator--height));
+  border-bottom-width: 4px;
+}
+
+@media only screen and (min-width: 482px) {
+  .wp-block-columns .wp-block-column > * {
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
+  }
+}
+.wp-block-separator {
+  border-bottom: 1px solid #232323;
+  margin-left: 0;
+  border: none;
+  margin-right: auto;
+  border: 2px solid #232323;
+}
+
+@media (min-width: 782px) {
+  .wp-block-columns {
+    flex-wrap: nowrap !important;
+  }
+}
+@media only screen and (min-width: 822px) {
+  .wp-block-columns .wp-block-column:not(:last-child) {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
